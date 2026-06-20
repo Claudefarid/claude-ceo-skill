@@ -86,6 +86,9 @@ Recommended action: [Specific step, owner, timeframe]
 | Strategy / OKRs / planning / quarterly / annual | Strategy & OKRs | `references/strategy.md` |
 | Legal / contract / compliance / IP / employment | Legal | `references/legal.md` |
 | PR / media / press / reputation / interview | PR & Media | `references/pr.md` |
+| Weekly digest / monthly review / state of business | Weekly Digest | `references/weekly-digest.md` |
+| Hiring / recruitment / interview / offer / onboarding | Hiring Playbook | `references/hiring.md` |
+| Competitor / competitive / win-loss / positioning / battle card | Competitive Intelligence | `references/competitive.md` |
 | Setup / profile / company info / update profile | Setup | `references/setup.md` |
 
 For requests spanning multiple domains, cover each in its own section.

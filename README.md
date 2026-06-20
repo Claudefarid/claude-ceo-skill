@@ -1,6 +1,16 @@
 # CEO Assistant — Claude Skill
 
-A Claude skill built for non-technical CEOs. Ask in plain language — get executive-ready summaries, recommendations, and next steps across every major business domain. Also routes to specialist skills when deeper work is needed.
+A Claude skill built for non-technical CEOs. Ask in plain language — get personalized, executive-ready answers across every major business domain. The skill remembers your company, shows industry benchmarks, alerts you to problems before you ask, and routes to specialist tools when deeper work is needed.
+
+---
+
+## What makes it different
+
+- **Remembers your company** — one-time setup saves your metrics, goals, team, and stage. Every answer uses your real numbers, not generic advice.
+- **Industry benchmarks on every metric** — always shows "your number vs what good looks like" with ✅ ⚠️ 🔴 status
+- **Proactive red flag alerts** — 20+ danger patterns monitored across all domains. Problems surface at the top of every response.
+- **17 business domains** — covers everything a CEO deals with
+- **Routes to specialist skills** — hands off to deeper tools when the task needs more than a summary
 
 ---
 
@@ -9,7 +19,7 @@ A Claude skill built for non-technical CEOs. Ask in plain language — get execu
 | Domain | What it handles |
 |--------|----------------|
 | **Finance** | P&L, cash flow, burn rate, budget vs actuals, runway |
-| **HR** | Hiring, performance reviews, team announcements, attrition, org changes |
+| **HR** | Performance reviews, team updates, attrition, org changes |
 | **Marketing** | Campaigns, leads, CAC, LTV, channel performance, ad spend |
 | **Dashboard & KPIs** | Business reviews, metric interpretation, weekly/monthly summaries |
 | **Operations** | Process issues, vendor SLAs, incident reports, efficiency |
@@ -19,146 +29,88 @@ A Claude skill built for non-technical CEOs. Ask in plain language — get execu
 | **Investor Relations** | Investor updates, board prep, fundraising narrative, cap table |
 | **Meetings** | Pre-meeting briefs, agendas, action item capture, follow-ups |
 | **Communications** | All-hands, crisis comms, customer announcements, partner emails |
+| **Strategy & OKRs** | OKR setting/grading, quarterly planning, decision frameworks |
+| **Legal & Compliance** | Contract red flags, employment law, IP, GDPR/HIPAA basics |
+| **PR & Media** | Crisis response, press releases, interview prep, reputation |
+| **Weekly Digest** | Full cross-domain business summary in one command |
+| **Hiring Playbook** | Job descriptions, interview frameworks, compensation, onboarding |
+| **Competitive Intelligence** | Competitor profiles, win/loss analysis, battle cards, positioning |
 
 ---
 
-## Skill routing — specialist integrations
+## Red flag alerts (auto-triggered)
 
-When a task needs more than a summary, the skill routes to specialist tools:
+The skill monitors 20+ critical patterns and surfaces alerts before summaries:
+
+**Finance:** Runway < 6 months · Burn escalating · Margin below benchmark · Revenue contracting
+
+**Sales:** Quota attainment < 60% · Pipeline < 2x target · Win rate < 20% · No deals in 30 days
+
+**Customer Success:** Churn > 3% · NRR < 90% · NPS < 20 · Key account at risk
+
+**HR:** Attrition > 25% · Critical role open 60+ days · Multiple departures same team
+
+**Operations:** SLA < 90% · Critical bug open 48+ hrs · Vendor concentration risk
+
+**Marketing:** CAC > LTV · Paid ROAS < 1x · Lead volume declining 3+ months
+
+---
+
+## Specialist skill routing
+
+When a task needs more than a summary, the skill routes to:
 
 | Need | Routes to |
 |------|-----------|
-| Competitor analysis | `competitor-profiling` skill |
-| SEO & organic traffic | `seo-audit` / `ai-seo` skill |
-| Content planning | `content-strategy` skill |
-| Customer insight & personas | `customer-research` skill |
-| Deep analytics & funnels | `analytics` skill |
-| Paid advertising | `marketing-skills:paid-ads` skill |
-| Email campaigns | `marketing-skills:email-sequence` skill |
-| Lead prospecting | `apollo:prospect` skill |
-| Social media content | `marketing-skills:social-content` skill |
-| Slide decks & design | `canvas-design` / Canva / Figma |
-| Deep research | `deep-research` skill |
+| Competitor deep-dive | `competitor-profiling` |
+| SEO & organic traffic | `seo-audit` / `ai-seo` |
+| Content planning | `content-strategy` |
+| Customer research | `customer-research` |
+| Analytics & funnels | `analytics` |
+| Paid advertising | `marketing-skills:paid-ads` |
+| Email campaigns | `marketing-skills:email-sequence` |
+| Lead prospecting | `apollo:prospect` |
+| Social content | `marketing-skills:social-content` |
+| Slide decks | `canvas-design` / Canva |
+| Deep research | `deep-research` |
 
 ---
 
 ## How to use
 
-Just describe what you need in plain language — no commands required.
+Just speak naturally — no commands needed.
 
-**Finance**
 ```
-Explain this P&L report
-How is our cash looking?
-What's our runway?
+give me my weekly digest
+how is sales tracking this quarter?
+explain this P&L report
+we have a critical bug — what should I know?
+prep me for the board meeting
+write an all-hands about the restructure
+review this contract
+help me set our Q3 OKRs
+who are our biggest competitors and how do we beat them?
+help me hire a VP of Sales
+how are our customers doing?
+what does this dashboard mean?
+update my company profile
 ```
-
-**HR**
-```
-We have an HR situation — one of our managers is underperforming
-Help me write a hiring announcement for our new CTO
-Summarize the performance review data
-```
-
-**Marketing**
-```
-How did marketing perform this month?
-What are our CAC and LTV numbers telling us?
-Which channel is bringing in the best leads?
-```
-
-**Dashboard**
-```
-Put together the weekly business review
-What does our KPI dashboard mean?
-How are we tracking against Q3 targets?
-```
-
-**Operations**
-```
-We had an outage last night — help me write the incident report
-Our vendor missed their SLA again — what should I say?
-What are our biggest operational risks right now?
-```
-
-**Sales**
-```
-How is sales tracking this quarter?
-Which deals need my attention?
-What does the pipeline look like for next month?
-```
-
-**Product**
-```
-What did the product team ship this month?
-We have a critical bug — what should I know?
-Summarize the roadmap for the board
-```
-
-**Customer Success**
-```
-How many customers are at risk of churning?
-What is our NPS telling us?
-Which accounts should I personally call this month?
-```
-
-**Investor Relations**
-```
-Write the monthly investor update
-Prep me for the board meeting
-Help me structure the fundraising pitch
-```
-
-**Meetings**
-```
-Prep me for my meeting with [Company] tomorrow
-Write an agenda for the quarterly planning session
-Capture the action items from this meeting
-```
-
-**Communications**
-```
-Write an all-hands announcement about the restructure
-Help me respond to this difficult email
-Draft a customer communication about the outage
-```
-
----
-
-## Output style
-
-Every response follows the same CEO-friendly format:
-- Headline insight first — no preamble
-- Key metrics in a scannable table
-- What's working / what needs attention
-- One clear recommendation (not a list of options)
-- 1–3 specific next steps with owners and dates
-- No jargon, no hype language, no made-up numbers
 
 ---
 
 ## Install
 
-### Option 1 — Claude Code CLI
-
 ```bash
-claude skills install https://github.com/YOUR_USERNAME/ceo-assistant
+claude skills install https://github.com/digitalmarketerswadhin-droid/ceo-assistant
 ```
 
-### Option 2 — Manual install
-
-1. Clone or download this repository
-2. Copy the `ceo-assistant/` folder into your Claude skills directory:
+### Manual install
 
 ```bash
-# macOS / Linux
 cp -r ceo-assistant ~/.claude/skills/
-
-# Windows
-xcopy ceo-assistant %USERPROFILE%\.claude\skills\ceo-assistant\ /E /I
 ```
 
-3. Restart Claude Code — the skill activates automatically
+Restart Claude Code — skill activates automatically.
 
 ---
 
@@ -166,21 +118,30 @@ xcopy ceo-assistant %USERPROFILE%\.claude\skills\ceo-assistant\ /E /I
 
 ```
 ceo-assistant/
-├── SKILL.md                        ← Main skill + routing logic
-├── README.md                       ← This file
+├── SKILL.md                        ← Main skill + routing + red flags
+├── company-profile.md              ← Your company context (auto-maintained)
+├── README.md
 └── references/
-    ├── finance.md                  ← P&L, cash flow, burn rate
-    ├── hr.md                       ← Hiring, performance, org changes
-    ├── marketing.md                ← Campaigns, leads, CAC, LTV
-    ├── dashboard.md                ← KPIs, business reviews
-    ├── operations.md               ← Process, vendor, incidents
-    ├── sales.md                    ← Pipeline, quota, forecasts
-    ├── product.md                  ← Roadmap, bugs, releases
-    ├── customer-success.md         ← Churn, NPS, account health
-    ├── investor.md                 ← Board, fundraising, updates
-    ├── meetings.md                 ← Prep, agendas, action items
-    ├── communications.md           ← All-hands, crisis, announcements
-    └── summarize.md                ← General report summarization
+    ├── setup.md                    ← Guided company setup + auto-update rules
+    ├── benchmarks.md               ← Industry benchmarks by stage and type
+    ├── finance.md
+    ├── hr.md
+    ├── marketing.md
+    ├── dashboard.md
+    ├── operations.md
+    ├── sales.md
+    ├── product.md
+    ├── customer-success.md
+    ├── investor.md
+    ├── meetings.md
+    ├── communications.md
+    ├── strategy.md
+    ├── legal.md
+    ├── pr.md
+    ├── weekly-digest.md            ← Full business digest format
+    ├── hiring.md                   ← Hiring playbook
+    ├── competitive.md              ← Competitive intelligence
+    └── summarize.md
 ```
 
 ---
@@ -188,11 +149,8 @@ ceo-assistant/
 ## Requirements
 
 - Claude Code (CLI or desktop app)
-- No API keys or additional configuration required
-- Optional: other Claude skills for deep-dive routing (competitor-profiling, seo-audit, etc.)
-
----
+- No API keys or extra configuration required
 
 ## License
 
-MIT — free to use, modify, and distribute.
+MIT
