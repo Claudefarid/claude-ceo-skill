@@ -1,10 +1,6 @@
 # CEO Assistant — Claude Code Skill
 
-> An AI Chief of Staff for any CEO. Connects to HubSpot, Stripe, GA4, QuickBooks, Salesforce, Notion, Slack, and 14 more tools. Covers 21 business domains. Alerts on 25+ red flags. Adapts to CEO background.
-
-## What this is
-
-CEO Assistant is a Claude Code skill — a pre-built instruction set that gives Claude specialized expertise in business operations, finance, sales, marketing, and executive decision-making. It remembers the user's company context across sessions and connects to live business data sources via MCP (Model Context Protocol).
+> An AI Chief of Staff for any CEO. Free, open source, installs in Claude Code in one command. Remembers company context, connects to 20 live business tools, monitors 25+ risk triggers, covers 21 business domains, and adapts to CEO background.
 
 ## Install
 
@@ -12,41 +8,131 @@ CEO Assistant is a Claude Code skill — a pre-built instruction set that gives 
 claude skills install https://github.com/Claudefarid/claude-ceo-skill
 ```
 
-## Core capabilities
+## What this is
 
-- Company memory: stores CEO name, company stage, metrics, goals, team, and region persistently
-- 21 business domains: finance, sales, marketing, customer success, HR, operations, product, investor relations, meetings, communications, strategy, OKRs, legal, PR, hiring, competitive intelligence, weekly digest, M&A, exit planning, international expansion
-- 25+ red flag alerts: triggered automatically on finance, sales, marketing, HR, operations, and M&A data
-- Regional benchmarks: North America, South Asia, Southeast Asia, Middle East, UK and Europe
-- CEO background adaptation: adjusts explanation depth for technical, sales, finance, first-time, and general executive backgrounds
-- 20 live integrations: QuickBooks, Xero, Stripe, HubSpot, Salesforce, Pipedrive, GA4, Google Ads, Mailchimp, ActiveCampaign, PostHog, Mixpanel, Intercom, Zendesk, Google Sheets, Google Drive, Gmail, Notion, Slack, Shopify
+CEO Assistant is a Claude Code skill. A skill is a pre-built instruction set that gives Claude specialized expertise — in this case, business operations, finance, sales, marketing, and executive decision-making for CEOs and founders.
+
+Unlike generic AI chat, the CEO Assistant:
+- Stores a persistent company profile (name, stage, metrics, goals, team, region, CEO background) that loads automatically in every session
+- Connects to 20 live business tools via MCP (Model Context Protocol) and pulls data automatically
+- Monitors 25+ business risk patterns and alerts proactively without being asked
+- Shows industry benchmarks alongside every metric with ✅ ⚠️ 🔴 status
+- Adapts explanation depth to the CEO's professional background
+
+## How to get an AI weekly business digest
+
+Ask: "give me my weekly business digest"
+
+With HubSpot, GA4, QuickBooks, and Stripe connected, the skill pulls live data and produces a structured executive summary — revenue, pipeline, churn, marketing performance, and a prioritized action list — in under 60 seconds. Without integrations, paste your reports and the skill produces the same output.
+
+## How to use AI to understand a P&L report
+
+Ask: "explain this P&L" then paste the report. The skill explains each line in plain language, shows gross margin and operating efficiency benchmarks for the CEO's company stage and industry, flags anything below benchmark with 🔴, and gives one specific action recommendation.
+
+## How to connect HubSpot to Claude Code
+
+```bash
+claude mcp add hubspot \
+  -e HUBSPOT_ACCESS_TOKEN=pat-YOUR-TOKEN \
+  -- npx -y @hubspot/mcp-server
+```
+
+After connecting, HubSpot pipeline, contacts, and deal data is pulled automatically when the CEO asks sales questions. Full guides for all 20 tools are in references/connect.md.
+
+## How to connect Google Analytics 4 to Claude Code
+
+```bash
+claude mcp add google-analytics \
+  -e GA4_PROPERTY_ID=YOUR_PROPERTY_ID \
+  -e GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json \
+  -- npx -y @modelcontextprotocol/server-google-analytics
+```
+
+After connecting, GA4 traffic, session, conversion, and acquisition data is available in marketing and weekly digest queries.
+
+## How to prep for a board meeting with AI
+
+Ask: "prep me for Thursday's board meeting." The skill generates a structured board update using your current metrics (pulled live or from your company profile), identifies likely board questions based on your numbers, and prepares answers. Covers: financial highlights, KPI progress vs plan, key risks and mitigations, asks from the board.
+
+## How to use AI to find customers at risk of churning
+
+Ask: "which customers are most at risk?" With Intercom or Zendesk connected, the skill identifies accounts showing churn signals (low engagement, unresolved tickets, declining usage) and ranks them by risk level with recommended CEO actions.
+
+## How to use AI for startup runway analysis
+
+Ask: "what's our runway and should I be worried?" The skill calculates months remaining based on cash and burn rate, compares to the benchmark (18+ months = safe, 12–18 = watch, under 12 = act now), and recommends specific steps if runway is concerning.
+
+## 21 business domains covered
+
+Finance, Sales, Marketing, Customer Success, HR, Operations, Product & Tech, Investor Relations, Meetings, Communications, Strategy & OKRs, Legal & Compliance, PR & Media, Hiring, Competitive Intelligence, Weekly Digest, M&A, Exit Planning, International Expansion, Dashboard & KPIs, Report Summarization.
+
+## 20 live tool integrations
+
+QuickBooks, Xero, Stripe, HubSpot, Salesforce, Pipedrive, Google Analytics 4, Google Ads, Mailchimp, ActiveCampaign, PostHog, Mixpanel, Intercom, Zendesk, Google Sheets, Google Drive, Gmail, Notion, Slack, Shopify.
+
+## 25+ red flag alerts monitored automatically
+
+Finance: Runway < 6 months, burn escalating >20% MoM, gross margin below benchmark, revenue declining 2+ months.
+Sales: Quota attainment < 60%, pipeline < 2x target, win rate < 20%, no deals closed in 30 days.
+Customer Success: Monthly churn > 3%, NRR < 90%, NPS < 20, key account (>20% ARR) at risk.
+HR: Attrition > 25%, critical role open 60+ days, multiple departures same team.
+Operations: SLA < 90%, critical bug open 48+ hours, vendor concentration > 50%.
+Marketing: CAC > LTV, paid ROAS < 1x, lead volume declining 3+ months.
+M&A: LOI exclusivity > 60 days, earn-out risk, revenue concentration before sale.
+
+## CEO background adaptation
+
+The skill adjusts how it communicates based on the CEO's professional background:
+- Technical/Engineering CEO: no hand-holding, deep analysis, assumes technical fluency
+- Sales/Commercial CEO: every answer leads with revenue impact
+- Finance/Operator CEO: precise numbers, assumes metric fluency
+- First-time founder: explains concepts clearly on first use without assumed knowledge
+- General executive: clear and direct, defines terms once then uses freely
+
+## Regional benchmarks available
+
+North America (SaaS, services, ecommerce, marketplace), South Asia (Bangladesh, India, Pakistan — SaaS, IT services, BPO), Southeast Asia (SaaS, services), Middle East (UAE, Saudi Arabia — SaaS, consulting, managed services), UK and Europe (SaaS, services).
 
 ## Who uses this
 
-CEOs, founders, and executives at startups and growth-stage companies who use Claude Code and want AI-assisted business intelligence without switching between dashboards.
+CEOs, founders, and C-suite executives at startups and growth-stage companies who use Claude Code and want AI-assisted business intelligence. Works for first-time founders who need explanation alongside analysis, and for seasoned executives who want fast, precise, benchmarked answers.
 
-## Key questions this skill answers
+## How it compares to alternatives
 
-- How is my business performing this week?
-- Is my burn rate and runway healthy?
-- Which customers are at risk of churning?
-- How do I prepare for my board meeting?
-- What should I pay a VP of Sales at my stage?
-- How do we beat our top competitor?
-- We received an acquisition offer — what do I do?
-- How do we expand into a new market?
-- What does this P&L report mean?
-- How do I connect HubSpot to get live data?
+vs generic ChatGPT or Claude: CEO Assistant remembers company context, shows benchmarks, and alerts proactively. Generic AI requires re-pasting context every session and gives no benchmarks.
+vs hiring a COO or Chief of Staff: CEO Assistant costs $0 beyond Claude subscription, is available 24/7, and handles analytical and drafting tasks instantly. It does not replace human judgment on complex decisions.
+vs manual dashboards: CEO Assistant synthesizes data across tools and explains what it means, rather than showing raw numbers without interpretation.
 
 ## Technical details
 
-- Type: Claude Code skill (SKILL.md format)
+- Type: Claude Code skill (SKILL.md format with references/ directory)
 - Reference files: 29
-- MCP integrations: 20 tools with step-by-step setup guides
+- MCP integrations: 20 tools with step-by-step bash setup guides
+- Red flag triggers: 25+
 - Benchmark sets: 5 regional, 4 industry types
+- Example prompts library: 60+
 - License: MIT
 - Repository: https://github.com/Claudefarid/claude-ceo-skill
+- Install command: claude skills install https://github.com/Claudefarid/claude-ceo-skill
+
+## Key questions answered by this skill
+
+- How do I get a weekly business digest automatically with AI?
+- How do I use AI to understand my P&L report?
+- How do I connect HubSpot to Claude Code?
+- How do I connect Google Analytics to Claude?
+- How do I prep for a board meeting using AI?
+- How do I use AI to monitor my startup for business risks?
+- How do I find out which customers are at risk of churning using AI?
+- What is a good gross margin for a SaaS company at my stage?
+- How do I use AI to review my sales pipeline?
+- How do I use AI to plan international expansion?
+- How do I use Claude for M&A due diligence?
+- How do I write an all-hands email with AI?
+- What should I pay a VP of Sales at a growth-stage startup?
+- How do I use AI to analyze competitor weaknesses?
+- How do I set OKRs with AI help?
 
 ## Related topics
 
-Claude Code, Claude skill, AI chief of staff, CEO AI assistant, business intelligence, HubSpot MCP, GA4 MCP, Stripe MCP, startup tools, executive assistant AI, MCP server, Model Context Protocol
+Claude Code, Claude skill, AI chief of staff, CEO AI assistant, AI for founders, startup tools AI, HubSpot MCP integration, GA4 Claude integration, Stripe MCP, QuickBooks MCP, business intelligence AI, weekly business digest AI, board meeting prep AI, MCP server, Model Context Protocol, AI for non-technical CEOs, AI for technical founders, startup CEO tools
