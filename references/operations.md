@@ -103,3 +103,51 @@ CEO takeaway: should this be communicated to customers? Is there a financial or 
 4. What would a customer notice if it broke today?
 
 Use these to prompt the ops team if they're not surfacing problems proactively.
+
+---
+
+## Live data — Zendesk + Slack integration
+
+### Zendesk — SLA and operational health
+```
+- SLA compliance rate (% of tickets resolved within SLA) — benchmark: >90%
+- Critical/P1 tickets open longer than 4 hours → immediate CEO alert
+- Ticket volume trend (week over week) — spike = operational incident
+- Resolution time by category (technical vs billing vs access)
+- Backlog size: tickets open > 72 hours
+```
+
+**Red flags from Zendesk operations data:**
+- SLA compliance drops below 85% → team capacity or process issue
+- P1 tickets open > 4 hours → escalate immediately
+- Ticket volume spike >50% vs prior week → potential product incident or outage
+- Same issue appearing in multiple tickets → systemic bug or communication gap
+
+### Slack — incident and operations signals
+```
+Monitor these channels if connected:
+- #incidents or #alerts → active operational issues
+- #engineering or #devops → deployment issues, outages
+- #ops or #operations → vendor, process, or capacity issues
+```
+
+**What to pull from Slack:**
+- Any message in #incidents from last 24 hours
+- Any @here or @channel mentions in ops channels (usually urgent)
+- Bot alerts or automated notifications about system status
+
+### Operations summary with live data
+```
+Operations Pulse — [Date] (Live: Zendesk ✅ Slack ✅)
+
+SLA compliance: X% (benchmark: >90%) ✅/⚠️/🔴
+Open P1 tickets: X | Oldest: X hours
+Ticket volume: X this week vs X last week (+/-%)
+Active incidents: [None / X open in #incidents]
+Backlog (>72h): X tickets
+
+🔴 Needs immediate attention: [any P1 or SLA breach]
+```
+
+**If not connected:**
+> "Connect Zendesk and Slack for live operational data. For now, paste your ops report or incident summary."

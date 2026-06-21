@@ -118,3 +118,47 @@ Tech debt = shortcuts taken earlier that slow the team down now.
 - **Competitor product analysis:** invoke `competitor-profiling` to see what competitors are shipping
 - **SEO for product pages:** invoke `seo-audit` to check product landing page performance
 - **User research on feature requests:** invoke `customer-research` to validate what customers actually want
+
+---
+
+## Live data — PostHog integration
+
+When PostHog is connected, pull product and user behavior data automatically.
+
+### What to pull from PostHog
+```
+- DAU / WAU / MAU (and DAU/MAU ratio — engagement benchmark)
+- Core activation funnel: signup → first key action → retained user
+- Feature adoption: % of users who used each major feature at least once
+- Retention cohorts: day 1, day 7, day 30 retention by signup month
+- Top events by volume (what users do most)
+- Drop-off points: where users stop in key flows
+- Feature flag status: which experiments are running and at what %
+```
+
+### CEO interpretation guide (plain language)
+- **DAU/MAU < 10%** → users signed up but don't come back — engagement problem
+- **DAU/MAU 10–25%** → moderate engagement — typical for B2B tools
+- **DAU/MAU > 25%** → strong daily habit — excellent for B2B
+- **Activation rate < 40%** → users don't reach their "aha moment" — onboarding problem
+- **Day 7 retention < 20%** → product-market fit concern — most users quit in week 1
+- **Feature adoption < 10%** → feature is either undiscovered, poorly designed, or not valued
+
+### Product summary with live data
+```
+Product Pulse — [Date] (Live: PostHog ✅)
+
+Active users: DAU X | MAU X | Engagement: X% DAU/MAU ✅/⚠️/🔴
+Activation rate: X% (benchmark: >40%) ✅/⚠️/🔴
+Day-7 retention: X% | Day-30 retention: X%
+Top feature: [Feature] used by X% of active users
+Drop-off: X% of users leave at [step] in onboarding
+
+Active experiments: X feature flags running
+CEO question: [Most important product signal this week]
+```
+
+**Auto-update in company-profile.md:** DAU/MAU ratio, activation rate, retention notes
+
+**If not connected:**
+> "Connect PostHog for live product metrics. For now, paste your product analytics report and I'll interpret it."

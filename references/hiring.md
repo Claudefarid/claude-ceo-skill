@@ -186,3 +186,55 @@ When a candidate counters:
 - Offer acceptance rate below 70% (compensation or culture perception issue)
 - No structured interview process — hiring on gut feel
 - CEO involved in every hire below VP level (not scalable)
+
+---
+
+## Live data — Google Sheets + Slack integration
+
+### Google Sheets — headcount planning and pipeline tracking
+Many companies track their hiring pipeline in a spreadsheet. If shared:
+```
+- Current open roles (title, department, days open, hiring manager)
+- Candidates in pipeline by stage (applied → screen → interview → offer → hired)
+- Offer acceptance rate (offers extended vs offers accepted)
+- Time-to-hire by role and department
+- Headcount plan vs actuals (planned hires vs actual hires this quarter)
+- Budget remaining for hiring (if tracked)
+```
+
+**Tell the CEO to share their hiring tracker:**
+> "Share your hiring or ATS tracker sheet with the CEO Assistant service account. I'll read it automatically and flag roles that have been open too long or pipelines that are too thin."
+
+**Red flags from hiring sheet:**
+- Role open > 45 days with fewer than 5 qualified candidates → sourcing problem
+- Offer acceptance rate < 70% → compensation or culture perception issue
+- Multiple roles open in same team → capacity crisis or growth bottleneck
+- Time-to-hire > 60 days for senior roles → process too slow, losing candidates
+
+### Slack — hiring signals
+When Slack is connected:
+```
+- Check #hiring or #recruiting channel for active discussions
+- Look for messages about candidate feedback from interview panels
+- Find any team concerns about understaffing raised in team channels
+```
+
+### Hiring dashboard with live data
+```
+Hiring Pulse — [Date] (Live: Google Sheets ✅)
+
+Open roles: X across X departments
+Oldest open role: [Title] — X days open 🔴
+Candidates in active pipeline: X
+Offers extended this month: X | Accepted: X (X% acceptance rate)
+Time-to-hire (avg): X days (benchmark: <45 days for ICs, <60 for senior)
+
+Needs CEO attention:
+- [Role] open X days with thin pipeline — needs sourcing push
+- [Role] offer declined — review comp or process
+```
+
+**Auto-update in company-profile.md:** `open_roles`, `team_size` (after hires confirmed)
+
+**If not connected:**
+> "Share your hiring tracker in Google Sheets for automatic pipeline visibility. For now, tell me what role you're working on."

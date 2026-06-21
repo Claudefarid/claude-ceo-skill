@@ -124,3 +124,53 @@ Use this when the CEO needs to prepare for an important meeting, capture action 
 - **Building a pitch deck for an investor meeting:** invoke `canvas-design` or Canva MCP
 - **Preparing a competitive position for a sales meeting:** invoke `competitor-profiling`
 - **Deep-researching an attendee or company before a strategic meeting:** invoke `deep-research`
+
+---
+
+## Live data — Notion + Google Drive integration
+
+### Notion — meeting notes and agendas
+When Notion is connected:
+```
+- Search for meeting notes from the last 7 days
+- Find recurring meeting templates (weekly team sync, 1:1s, board meetings)
+- Pull open action items from meeting databases
+- Find agenda pages for upcoming meetings
+```
+
+**What to pull before a meeting:**
+- Previous meeting notes with the same person/team
+- Open action items assigned to CEO from last meeting
+- Any prep docs linked in the meeting page
+
+**What to pull after a meeting:**
+- Draft action items from notes
+- Update meeting database with status and next steps
+
+### Google Drive — meeting documents
+When Google Drive is connected:
+```
+- Find pre-read documents shared before the meeting
+- Pull the latest version of recurring decks (weekly ops review, QBR, board deck)
+- Find any documents mentioned in calendar invites
+```
+
+### Meeting summary with live data
+```
+Meeting Brief — [Meeting name] on [Date]
+
+Pre-read from Drive: [Document name — last modified date]
+Previous meeting notes (Notion): [Date of last meeting]
+Open action items from last session:
+  □ [Action] — [Owner] — Due [Date] — Status: [Done/Pending/Overdue]
+  □ [Action] — [Owner] — Due [Date] — Status
+
+Suggested agenda:
+1. Review open action items (5 min)
+2. [Topic] (X min)
+3. [Topic] (X min)
+4. New action items + owners (5 min)
+```
+
+**If not connected:**
+> "Connect Notion and Google Drive to pull meeting notes and pre-reads automatically. For now, tell me what meeting you're preparing for."

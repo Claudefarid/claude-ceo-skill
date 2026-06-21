@@ -165,3 +165,57 @@ Use when: a decision feels uncomfortable but strategically important.
 - Strategy that changes every quarter based on the last meeting
 - No connection between OKRs and individual performance reviews
 - A roadmap or plan that has never been said no to
+
+---
+
+## Live data — Notion + Google Sheets integration
+
+### Notion — OKR tracking and strategic planning docs
+When Notion is connected:
+```
+- Find the OKR database (look for pages named "OKRs", "Goals", "Objectives")
+- Pull current quarter OKRs with progress status
+- Find strategic planning documents (annual plan, 3-year vision, company roadmap)
+- Pull decision log or ADR (Architecture/Any Decision Records) if maintained
+- Find the team wiki for context on current priorities
+```
+
+**What to pull for OKR review:**
+- All objectives for current quarter
+- Key result progress (% complete or metric vs target)
+- Owner for each KR
+- Last updated date (stale KRs = no one is tracking)
+- Notes on blockers or risks
+
+### Google Sheets — metrics-based strategy tracking
+Many companies track strategic metrics in Sheets (growth rates, market share, competitive data):
+```
+- Pull the company scorecard or metrics dashboard sheet
+- Find the annual/quarterly targets sheet
+- Pull the financial model (if shared) for planning context
+- Find the OKR tracker if maintained in Sheets rather than Notion
+```
+
+### OKR review with live data
+```
+OKR Review — Q[X] [Year] (Live: Notion ✅)
+[X] weeks into the quarter
+
+OBJECTIVE 1: [Name] — Owner: [Name]
+  KR1: [Metric] → [Current] / [Target] = X% ✅/⚠️/🔴
+  KR2: [Metric] → [Current] / [Target] = X% ✅/⚠️/🔴
+
+OBJECTIVE 2: [Name] — Owner: [Name]
+  KR1: [Metric] → [Current] / [Target] = X% ✅/⚠️/🔴
+
+Overall quarter health: ✅ On track / ⚠️ At risk / 🔴 Off track
+
+CEO priorities based on OKR status:
+1. [Objective most at risk] — needs intervention
+2. [Quick win available] — can be accelerated
+```
+
+**Auto-update in company-profile.md:** `current_goals[]`, OKR progress status
+
+**If not connected:**
+> "Connect Notion or share your OKR Google Sheet to track progress automatically. For now, paste your OKR update."

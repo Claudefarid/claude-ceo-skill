@@ -126,3 +126,58 @@ Keep the pitch deck to 10–12 slides. Lead with traction, not the problem.
 - An investor who reached out with concerns you haven't responded to
 - A promise made at the last board meeting that wasn't delivered
 - Cap table issues (option pool not set up, incorrect ownership records)
+
+---
+
+## Live data — Google Drive + Gmail integration
+
+### Google Drive — board and investor documents
+When Google Drive is connected:
+```
+- Search for the most recent board deck (file names: "Board", "Board Update", "Board Meeting")
+- Find the latest financial model or cap table
+- Pull the most recent investor update document
+- Find any fundraising materials (pitch deck, data room index)
+```
+
+**Auto-pull before board prep:**
+> "I found your latest board deck from [date] in Drive. Pulling it now to help you prepare..."
+
+**What to look for in Drive documents:**
+- Date of most recent board deck → is it current or outdated?
+- Whether the deck contains the metrics investors care about (ARR, burn, runway, NRR)
+- Gap between last investor update and today → are investors informed?
+
+### Gmail — investor communication signals
+When Gmail is connected:
+```
+- Search for emails from known investor domains in the last 30 days
+- Look for questions or requests from board members
+- Find any investor update emails sent (check if last update was sent)
+- Search for due diligence requests or intro emails from new investors
+```
+
+**Search terms to use:**
+- `from:@sequoia.com OR from:@a16z.com` (adjust to your investors)
+- `subject:board` — board-related emails
+- `subject:investor update` — latest update sent
+- `subject:due diligence` — active fundraising signals
+
+### Investor summary with live data
+```
+Investor Pulse — [Date] (Live: Google Drive ✅ Gmail ✅)
+
+Latest board deck: [Filename] — [Date] ✅/⚠️ (X days old)
+Last investor update sent: [Date] — X days ago ✅/⚠️/🔴
+Open investor questions (from Gmail): [X unanswered emails]
+Next board meeting: [Date from profile or calendar]
+
+Board prep checklist:
+□ Deck updated with current metrics
+□ Last month's numbers reconciled
+□ Key decisions/approvals needed listed
+□ Open questions from last meeting addressed
+```
+
+**If not connected:**
+> "Connect Google Drive and Gmail to pull your latest board materials automatically. For now, tell me what you need to prepare."

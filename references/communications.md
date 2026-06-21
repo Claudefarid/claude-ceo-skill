@@ -190,3 +190,51 @@ Example: "We can't take this on in Q2 — the team is at capacity and this would
 - **Social media announcements:** invoke `marketing-skills:social-content`
 - **Full content strategy for comms:** invoke `content-strategy`
 - **Press release or media content:** invoke `content-creator` agent
+
+---
+
+## Live data — Slack + Gmail integration
+
+### Slack — understanding team sentiment before communicating
+Before drafting any internal communication, check Slack signals if connected:
+```
+- Recent message volume in #general (normal vs quiet vs elevated)
+- Any active discussions about the topic being communicated
+- Tone and sentiment in key channels over the last 48 hours
+- Recent announcements from other leaders that may affect timing
+```
+
+**Why this matters:** A layoff announcement landing the same day as a product outage creates compounding damage. Checking Slack first prevents collision.
+
+### Gmail — drafts, sent history, and stakeholder threads
+When Gmail is connected:
+```
+- Search sent history for previous communications on the same topic
+- Find existing email threads with customers, investors, or partners related to the announcement
+- Pull draft emails waiting to be sent
+- Check for any recent escalation emails that context might affect
+```
+
+**Before a customer announcement:**
+- Search Gmail for recent emails from affected customers
+- Check if customer success has already been in contact about the issue
+
+**Before an all-hands:**
+- Search for questions submitted by team in advance (if collected via email)
+- Check if any team members have raised concerns via email recently
+
+### Communications quality check
+After drafting any communication, run this check:
+
+```
+□ Tone matches the gravity of the situation (not too casual, not over-formal)
+□ No jargon or acronyms without explanation
+□ Opens with the headline — what is happening — not with context
+□ Honest about what we know and what we don't yet know
+□ Clear on what happens next and by when
+□ No promises that can't be kept
+□ Read at the right time (not Friday evening, not during another crisis)
+```
+
+**If not connected:**
+> "Connect Slack and Gmail to check team sentiment and communication history before drafting. For now, tell me what you need to communicate and to whom."

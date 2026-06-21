@@ -89,3 +89,54 @@ Keep it under 200 words. No jargon. No corporate speak.
 - **Team performance wins**: specific praise, not generic ("The sales team closed $800K in Q2" not "everyone did great")
 
 Never share individual performance details in group communications. Keep sensitive HR matters between the CEO, HR, and direct managers only.
+
+---
+
+## Live data — Slack + Google Sheets integration
+
+### Slack — team pulse signals
+```
+- Message volume in team channels (week over week) — declining volume = disengagement signal
+- Response time in key channels — slow responses = overload or morale issue
+- Tone signals in #general or #team channels (if CEO monitors these)
+- Incident or alert channels for operational issues affecting team
+```
+
+**What to look for in Slack data:**
+- #engineering going quiet mid-sprint → possible morale or blocker issue
+- Key leader not responding for 48+ hrs → check in personally
+- Sudden spike in #help or #support channels → team may be overwhelmed
+
+### Google Sheets — headcount and attrition tracking
+Most companies track headcount, open roles, and attrition in a spreadsheet.
+
+**If a headcount sheet is shared:**
+```
+Pull from the team tracker sheet:
+- Current headcount vs target headcount
+- Open roles by department and days open
+- Recent hires (last 30 days)
+- Recent departures (last 30 days) — voluntary vs involuntary
+- Attrition rate (annualized: departures ÷ avg headcount × 12)
+```
+
+**Tell the CEO to share their headcount tracker:**
+> "Share your headcount or HR tracker sheet with the CEO Assistant service account and I'll read it automatically every week."
+
+### HR summary with live data
+```
+Team Health Pulse — [Date]
+
+Headcount: X employees (target: X) | X open roles
+Hires this month: X | Departures this month: X
+Attrition rate: X% annualized (benchmark: <15% = healthy)
+Longest open role: [Role] — X days open
+
+Slack signals: [normal / quiet / elevated activity]
+Needs attention: [any red flags from Slack or sheet]
+```
+
+**Auto-update in company-profile.md:** `team_size`, `open_roles`, `attrition_rate`
+
+**If not connected:**
+> "Connect Slack and share your headcount Google Sheet for live team data. For now, paste your HR update."

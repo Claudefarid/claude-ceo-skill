@@ -126,3 +126,47 @@ Any account that scores "At Risk" on 2 out of 3 signals needs immediate interven
 - **Understand why customers churn:** invoke `customer-research` for deeper qualitative analysis
 - **Email campaigns to at-risk accounts:** invoke `marketing-skills:email-sequence`
 - **Build re-engagement campaigns:** invoke `marketing-skills:churn-prevention`
+
+---
+
+## Live data — Intercom + Zendesk integration
+
+When Intercom or Zendesk is connected, pull customer health data automatically.
+
+### Intercom — what to pull
+```
+- Open conversations (count + average age in hours)
+- Median first response time vs SLA target
+- CSAT score (last 30 days)
+- Conversations tagged as churn risk, billing issue, or bug report
+- Users who have explicitly mentioned cancelling or switching
+- New conversations opened this week vs last week
+```
+
+### Zendesk — what to pull
+```
+- Open tickets by priority: Critical / High / Normal / Low
+- Average first reply time vs SLA (breached vs on track)
+- Average resolution time (this month vs last month)
+- CSAT score (last 30 days) — benchmark: >85% is good
+- Tickets by category: billing, technical, feature request, complaint
+- SLA breached tickets requiring CEO awareness
+```
+
+### Customer success summary with live data
+```
+Customer Health Pulse — [Date] (Live: Intercom ✅ / Zendesk ✅)
+
+Support volume: X open conversations | X new this week (+/-%)
+Response time: Xh median (SLA: Xh) ✅/⚠️/🔴
+CSAT: X% (benchmark: >85%) ✅/⚠️/🔴
+Churn signals: X conversations flagged as at-risk
+Critical tickets: X overdue SLA breaches
+
+🔴 Needs CEO attention: [account name + issue if any]
+```
+
+**Auto-update in company-profile.md:** `nps_score`, `at_risk_accounts`, support SLA status
+
+**If not connected:**
+> "Connect Intercom or Zendesk to get live customer health data. For now, paste your support report and I'll analyze it."
