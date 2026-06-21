@@ -127,3 +127,81 @@ Recommend tracking these 10 metrics, updated weekly:
 10. One product/ops health metric (uptime, delivery rate, etc.)
 
 Keep it on one page. Color-code status. CEO reviews in under 10 minutes.
+
+---
+
+## Live data — GA4 + Mixpanel + MS Clarity integration
+
+When analytics tools are connected, pull data automatically for any dashboard or KPI review.
+
+### GA4 — core business metrics
+```
+Pull for every dashboard review:
+- Sessions and users (MTD vs prior month)
+- Channel breakdown (organic, paid, direct, social, referral)
+- Conversion rate (sessions → primary goal)
+- Top 10 pages by sessions and conversions
+- Geographic performance (top 5 countries)
+- Device split (desktop vs mobile vs tablet)
+```
+
+**Interpreting GA4 data for a non-technical CEO:**
+- Sessions dropping → top of funnel problem (SEO, paid, or brand awareness)
+- Sessions stable but conversions dropping → landing page or offer problem
+- Mobile sessions high but conversions low → mobile UX issue (check MS Clarity)
+- One channel down sharply → algorithm change, budget cut, or technical issue
+
+### Mixpanel — product and user behavior metrics
+```
+Pull when available:
+- DAU / WAU / MAU (daily, weekly, monthly active users)
+- DAU/MAU ratio (engagement — good is >20%, great is >50%)
+- Core funnel: signup → activation → retained user
+- Feature adoption: % of users who used key feature at least once
+- Retention by cohort: what % of users from month X are still active in month X+3
+- Churned users: did they stop using a specific feature before leaving?
+```
+
+**CEO interpretation guide:**
+- DAU/MAU < 10% → low engagement — users signed up but aren't coming back
+- Activation rate < 40% → onboarding problem — users don't reach their "aha moment"
+- Day 7 retention < 20% → product-market fit concern for most SaaS products
+- Feature with <10% adoption → either bad UX, undiscovered, or not valued
+
+### MS Clarity — UX signal metrics
+```
+Pull when available:
+- Pages with highest rage click rate (users clicking something expecting it to work)
+- Pages with highest dead click rate (clicks going nowhere)
+- Average scroll depth per page
+- Session recordings for users who dropped off key funnels
+```
+
+**CEO interpretation guide:**
+- Rage clicks on pricing page → confusing pricing or CTA not working
+- Low scroll depth on landing page → headline not compelling enough
+- High dead clicks on mobile → navigation or button placement issue
+
+### Full connected dashboard output format
+```
+Dashboard Pulse — [Date]
+Data sources: GA4 ✅ | Mixpanel ✅ | HubSpot ✅ | QuickBooks ✅ | Clarity ⚠️ (not connected)
+
+TRAFFIC (GA4)
+Sessions: X (+/-% vs last month) | Users: X
+Top channel: [Channel] at X% of traffic
+Conversion rate: X% (benchmark: X%)
+
+PRODUCT (Mixpanel)
+MAU: X | DAU/MAU: X% (benchmark: >20%)
+Activation rate: X% | Day-30 retention: X%
+
+UX SIGNALS (Clarity)
+[Not connected — connect for heatmap and rage click data]
+
+PIPELINE (HubSpot)
+Open pipeline: $X | Deals stalled: X
+
+FINANCE (QuickBooks)
+Cash: $X | Runway: X months | Burn: $X/mo
+```

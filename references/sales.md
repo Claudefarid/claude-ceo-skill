@@ -112,3 +112,54 @@ Present as:
 2. Which deals need CEO involvement to move forward?
 3. Is the pipeline healthy enough to hit next quarter's number?
 4. Are there any early warning signs in this month's data that will show up in revenue 60 days from now?
+
+---
+
+## Live data — HubSpot CRM / Salesforce integration
+
+When HubSpot CRM or Salesforce MCP is connected, pull pipeline data automatically.
+
+### HubSpot CRM — what to pull
+```
+- Open deals by stage (full pipeline breakdown)
+- Deals closed this month: closed won vs closed lost
+- Win rate: closed won ÷ (closed won + closed lost)
+- Average deal size (last 90 days)
+- Average sales cycle (days from create to close)
+- Deals with no activity in 14+ days (stalled deals)
+- Pipeline by owner (rep performance)
+- New deals created this month
+```
+
+**HubSpot MCP calls:**
+- `get_pipelines` — stage breakdown with deal counts and values
+- `search_objects(objectType: "deals", filterGroups: [{filters: [{propertyName: "closedate", operator: "BETWEEN"}, {propertyName: "dealstage", operator: "EQ", value: "closedwon"}]}])`
+- `search_objects` with `hs_lastmodifieddate` to find stalled deals
+
+### Salesforce — what to pull
+```
+- Opportunity pipeline by stage and amount
+- Closed won this month vs quota
+- Forecast by rep
+- Win/loss reason breakdown
+- Account engagement scores
+```
+
+### Live sales summary format
+```
+Sales Pulse — [Date] (Live data from HubSpot CRM)
+
+Pipeline: $X across X deals | Weighted: $X
+Closed this month: $X vs $X target (X% attainment)
+Win rate: X% | Avg deal: $X | Avg cycle: X days
+Stalled deals: X (no activity 14+ days) — needs follow-up
+Best rep: [Name] at $X closed | Needs support: [Name] at $X
+
+🔴 Alerts: [any triggered by live data]
+```
+
+**Auto-update in company-profile.md:**
+- `pipeline_value`, `win_rate`, `average_deal_size`, `quota_attainment`
+
+**If not connected:**
+> "Connect HubSpot CRM or Salesforce to pull pipeline data automatically. For now, paste your pipeline report and I'll analyze it."

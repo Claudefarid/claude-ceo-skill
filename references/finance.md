@@ -87,3 +87,34 @@ Use this when the CEO needs to understand or act on financial reports: P&L, cash
 5. Give a recommendation
 
 Do not relay every line item. Summarize and highlight.
+
+---
+
+## Live data — QuickBooks integration
+
+When QuickBooks MCP is connected, pull data automatically before presenting any finance summary.
+
+**What to pull:**
+```
+- P&L for current month and last month (for MoM comparison)
+- Balance sheet (cash on hand, accounts receivable)
+- Cash flow statement (operating cash flow)
+- Expense breakdown by category (top 5 expense lines)
+- Revenue by customer (top 10, to check concentration)
+```
+
+**After pulling, auto-fill these fields in company-profile.md:**
+- `cash_on_hand` — from balance sheet
+- `burn_rate` — from total operating expenses (monthly)
+- `gross_margin` — from P&L (gross profit ÷ revenue)
+- `runway_months` — cash on hand ÷ burn rate
+- `mrr_or_arr` — from revenue line
+
+**If QuickBooks is not connected:**
+> "I can analyze your finances in detail if you paste your P&L or export from QuickBooks. Alternatively, say 'how do I connect QuickBooks' and I'll walk you through it."
+
+**Red flags to check from QuickBooks data:**
+- Accounts receivable > 60 days overdue → customers are slow to pay
+- Any single expense category growing >30% MoM without corresponding revenue growth
+- Cash balance declining faster than the stated burn rate
+- Revenue recognized ≠ cash collected (accrual vs cash timing issue)

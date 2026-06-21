@@ -9,10 +9,18 @@ The Weekly Digest is the CEO's single most important recurring output — a comp
 ## How to generate the Weekly Digest
 
 1. Load `company-profile.md` for current metrics and goals
-2. Ask the CEO: "Share any reports or updates from this week — finance, sales, marketing, team, product, or anything else. I'll compile the full digest."
-3. If no data is shared, generate the digest using the profile + ask the CEO to fill in gaps marked `[update needed]`
-4. Run the red flag check across ALL domains before writing
-5. Generate the digest using the format below
+2. **Auto-pull from connected tools** (check `references/integrations.md`):
+   - QuickBooks → cash, burn, runway, gross margin
+   - HubSpot → leads, pipeline, deals closed, win rate
+   - GA4 → sessions, conversions, top channels
+   - Mixpanel → DAU/MAU, retention, activation
+3. If tools are connected: generate digest from live data — do NOT ask the CEO to paste anything
+4. If tools are NOT connected: say "I can pull this automatically if you connect HubSpot, GA4, or QuickBooks. For now, share any reports and I'll compile the digest."
+5. Run the red flag check across ALL domains before writing
+6. Generate the digest using the format below
+
+**Data source line** — always show at the top of the digest:
+> *Data sources: QuickBooks ✅ | HubSpot ✅ | GA4 ✅ | Mixpanel ⚠️ (not connected) | Manual inputs: [list any]*
 
 ---
 
