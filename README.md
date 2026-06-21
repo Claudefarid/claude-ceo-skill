@@ -1,6 +1,6 @@
 # CEO Assistant — Claude Skill
 
-A Claude skill built for non-technical CEOs. Ask in plain language — get personalized, executive-ready answers across every major business domain. Connects to your live tools (HubSpot, GA4, QuickBooks) for automatic data pulling. No more pasting spreadsheets.
+An AI Chief of Staff for any CEO. Technical founders, first-time founders, career operators, seasoned executives — it adapts to your background, remembers your company, and gives you personalized answers across every business domain. Connects to your live tools (HubSpot, GA4, QuickBooks, Stripe, and 16 more) for automatic data pulling. No more pasting spreadsheets.
 
 ---
 

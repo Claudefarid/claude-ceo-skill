@@ -9,6 +9,7 @@
 - **Last updated:** [not set]
 - **Profile version:** 1
 - **Connected tools:** [not set — Google Drive / Gmail / HubSpot / Salesforce / QuickBooks / Xero / Google Sheets / None]
+- **CEO background:** [not set — Technical/Engineering / Sales/Commercial / Finance/Operator / First-time founder / General executive]
 
 ---
 

@@ -84,7 +84,19 @@ Capture: `current_challenge`
 
 ---
 
-### Q8 — Data sources (optional)
+### Q8 — Your background (optional but improves every answer)
+> "What's your professional background? This helps me adjust how I explain things.
+> - Technical / Engineering — I'll skip basics and go deeper on data and product
+> - Sales / Commercial — I'll lead with revenue impact in every answer
+> - Finance / Operator — I'll be precise with numbers and assume metric fluency
+> - First-time founder — I'll explain concepts clearly without assuming domain knowledge
+> - General executive — I'll be direct and define terms when useful"
+
+Capture: `ceo_background`
+
+---
+
+### Q9 — Data sources (optional)
 > "Do you have any of these tools connected to Claude? Knowing this helps me pull data automatically rather than waiting for you to paste it."
 > - Google Drive (finance reports, board decks)
 > - Gmail (investor updates, customer emails)
