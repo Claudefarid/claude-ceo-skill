@@ -163,7 +163,7 @@ Once you have the JSON file path and Property ID:
 claude mcp add google-analytics \
   -e GA4_PROPERTY_ID=YOUR_PROPERTY_ID \
   -e GOOGLE_APPLICATION_CREDENTIALS=/path/to/your-service-account.json \
-  -- npx -y @modelcontextprotocol/server-google-analytics
+  -- npx -y mcp-server-ga4
 ```
 
 > "Replace `YOUR_PROPERTY_ID` with the number from Step 3, and `/path/to/your-service-account.json` with the actual path to the JSON file you downloaded (e.g. `/Users/yourname/Desktop/ceo-assistant-abc123.json`)."
@@ -197,7 +197,7 @@ claude mcp add quickbooks \
   -e QB_CLIENT_SECRET=YOUR_CLIENT_SECRET \
   -e QB_REFRESH_TOKEN=YOUR_REFRESH_TOKEN \
   -e QB_REALM_ID=YOUR_COMPANY_ID \
-  -- npx -y quickbooks-mcp-server
+  -- npx -y quickbooks-mcp
 ```
 
 > "To get these credentials:
@@ -236,7 +236,7 @@ claude mcp add salesforce \
   -e SF_PASSWORD=yourpassword \
   -e SF_SECURITY_TOKEN=yourtoken \
   -e SF_LOGIN_URL=https://login.salesforce.com \
-  -- npx -y salesforce-mcp-server
+  -- npx -y salesforce-mcp
 ```
 
 > "To get your Security Token: Salesforce → Settings → My Personal Information → Reset My Security Token. It will be emailed to you."
@@ -292,7 +292,7 @@ Say "connect [tool name]" to set up any of these.
 ```bash
 claude mcp add stripe \
   -e STRIPE_SECRET_KEY=sk_live_YOUR_KEY \
-  -- npx -y @stripe/mcp-server-stripe
+  -- npx -y stripe-mcp
 ```
 
 ### What it pulls automatically
@@ -321,7 +321,7 @@ claude mcp add stripe \
 claude mcp add xero \
   -e XERO_CLIENT_ID=YOUR_CLIENT_ID \
   -e XERO_CLIENT_SECRET=YOUR_CLIENT_SECRET \
-  -- npx -y xero-mcp-server
+  -- npx -y xero-mcp
 ```
 
 ### What it pulls automatically
@@ -346,7 +346,7 @@ claude mcp add xero \
 ```bash
 claude mcp add pipedrive \
   -e PIPEDRIVE_API_TOKEN=YOUR_TOKEN \
-  -- npx -y pipedrive-mcp-server
+  -- npx -y pipedrive-mcp
 ```
 
 ### What it pulls automatically
@@ -376,7 +376,7 @@ claude mcp add pipedrive \
 claude mcp add mailchimp \
   -e MAILCHIMP_API_KEY=YOUR_KEY \
   -e MAILCHIMP_DATA_CENTER=us1 \
-  -- npx -y mailchimp-mcp-server
+  -- npx -y mailchimp-mcp
 ```
 
 ### What it pulls automatically
@@ -389,26 +389,19 @@ claude mcp add mailchimp \
 
 ## ActiveCampaign — Setup walkthrough
 
-**Time: 5 minutes | What you get: Email performance, automation health, contact activity**
+**No official MCP package available yet.**
 
-### Step 1 — Get API credentials
-> "1. Log into ActiveCampaign
-> 2. Go to **Settings → Developer**
-> 3. Copy your **API URL** and **API Key**"
+**Best alternative — Google Sheets bridge:**
+> "Export your ActiveCampaign reports to Google Sheets (ActiveCampaign → Reports → Export), then connect Google Sheets MCP. I'll read your campaign data automatically from there."
 
-### Step 2 — Install
 ```bash
-claude mcp add activecampaign \
-  -e AC_API_URL=https://youraccountname.api-us1.com \
-  -e AC_API_KEY=YOUR_KEY \
-  -- npx -y activecampaign-mcp-server
+# Connect Google Sheets instead
+claude mcp add google-sheets \
+  -e GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json \
+  -- npx -y google-sheets-mcp
 ```
 
-### What it pulls automatically
-- Active automations and their performance
-- Campaign open and click rates
-- Contact list health (active vs unengaged)
-- Deal pipeline (if using CRM features)
+Once connected, say: "read my ActiveCampaign export from Google Sheets" and I'll pull your campaign metrics automatically.
 
 ---
 
@@ -431,7 +424,7 @@ claude mcp add google-ads \
   -e GOOGLE_ADS_CUSTOMER_ID=YOUR_CUSTOMER_ID \
   -e GOOGLE_ADS_DEVELOPER_TOKEN=YOUR_DEV_TOKEN \
   -e GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json \
-  -- npx -y google-ads-mcp-server
+  -- npx -y google-ads-mcp
 ```
 
 ### What it pulls automatically
@@ -476,29 +469,26 @@ claude mcp add posthog \
 
 ## Intercom — Setup walkthrough
 
-**Time: 5 minutes | What you get: Support conversations, CSAT, response times, at-risk users**
+**No official MCP package available yet.**
 
-### Step 1 — Get Access Token
-> "1. Log into Intercom
-> 2. Go to **Settings → Integrations → Developer Hub**
-> 3. Create a new app or use existing
-> 4. Go to **Authentication → Access Token**
-> 5. Copy the token"
+**Best alternative — Zendesk or Google Sheets bridge:**
+> "If you also use Zendesk, connect that instead — it covers the same support metrics. Alternatively, export your Intercom reports to Google Sheets monthly and I'll read them automatically."
 
-### Step 2 — Install
 ```bash
-claude mcp add intercom \
-  -e INTERCOM_ACCESS_TOKEN=YOUR_TOKEN \
-  -- npx -y intercom-mcp-server
+# Option A — Connect Zendesk (covers same support metrics)
+claude mcp add zendesk \
+  -e ZENDESK_SUBDOMAIN=yourcompany \
+  -e ZENDESK_EMAIL=your@email.com \
+  -e ZENDESK_API_TOKEN=YOUR_TOKEN \
+  -- npx -y zendesk-mcp
+
+# Option B — Google Sheets bridge
+claude mcp add google-sheets \
+  -e GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json \
+  -- npx -y google-sheets-mcp
 ```
 
-### What it pulls automatically
-- Open conversation count and age
-- Median first response time (vs SLA)
-- CSAT score (current month)
-- Conversations by tag (bug reports, billing, churn risk)
-- Users who explicitly said they're cancelling
-- New conversations opened this week
+Once connected via Sheets, say: "read my Intercom export" and I'll pull CSAT, response times, and conversation data.
 
 ---
 
@@ -518,7 +508,7 @@ claude mcp add zendesk \
   -e ZENDESK_SUBDOMAIN=yourcompany \
   -e ZENDESK_EMAIL=your@email.com \
   -e ZENDESK_API_TOKEN=YOUR_TOKEN \
-  -- npx -y zendesk-mcp-server
+  -- npx -y zendesk-mcp
 ```
 
 ### What it pulls automatically
@@ -541,7 +531,7 @@ The most flexible integration — if you track anything in Google Sheets (KPI da
 ```bash
 claude mcp add google-sheets \
   -e GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json \
-  -- npx -y @modelcontextprotocol/server-google-sheets
+  -- npx -y google-sheets-mcp
 ```
 
 ### Step 2 — Share your Sheets with the service account
@@ -578,7 +568,7 @@ Many teams send weekly/monthly reports via email. This reads those automatically
 ```bash
 claude mcp add gmail \
   -e GOOGLE_CREDENTIALS_PATH=/path/to/oauth-credentials.json \
-  -- npx -y @modelcontextprotocol/server-gmail
+  -- npx -y gmail-mcp
 ```
 
 ### What it searches for automatically
@@ -635,7 +625,7 @@ claude mcp add gdrive \
 ```bash
 claude mcp add notion \
   -e NOTION_API_KEY=secret_YOUR_TOKEN \
-  -- npx -y @modelcontextprotocol/server-notion
+  -- npx -y @notionhq/notion-mcp-server
 ```
 
 ### What it reads automatically
@@ -698,7 +688,7 @@ claude mcp add slack \
 claude mcp add shopify \
   -e SHOPIFY_ACCESS_TOKEN=shpat_YOUR_TOKEN \
   -e SHOPIFY_SHOP_DOMAIN=yourstore.myshopify.com \
-  -- npx -y shopify-mcp-server
+  -- npx -y shopify-mcp
 ```
 
 ### What it pulls automatically

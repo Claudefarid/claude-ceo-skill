@@ -301,4 +301,15 @@ MIT — free to use, fork, and distribute.
 
 ---
 
+## Built by
+
+**Farid Swadhin** — AI tools for founders and operators.
+
+- Website: [fariduzzaman.xyz](https://fariduzzaman.xyz/)
+- LinkedIn: [linkedin.com/in/fswadhin](https://www.linkedin.com/in/fswadhin/)
+
+If this skill saves you time, connect on LinkedIn or star the repo — it helps others find it.
+
+---
+
 *The AI Chief of Staff that knows your business — not just your question.*
