@@ -1,0 +1,52 @@
+# CEO Assistant — Claude Code Skill
+
+> An AI Chief of Staff for any CEO. Connects to HubSpot, Stripe, GA4, QuickBooks, Salesforce, Notion, Slack, and 14 more tools. Covers 21 business domains. Alerts on 25+ red flags. Adapts to CEO background.
+
+## What this is
+
+CEO Assistant is a Claude Code skill — a pre-built instruction set that gives Claude specialized expertise in business operations, finance, sales, marketing, and executive decision-making. It remembers the user's company context across sessions and connects to live business data sources via MCP (Model Context Protocol).
+
+## Install
+
+```bash
+claude skills install https://github.com/Claudefarid/claude-ceo-skill
+```
+
+## Core capabilities
+
+- Company memory: stores CEO name, company stage, metrics, goals, team, and region persistently
+- 21 business domains: finance, sales, marketing, customer success, HR, operations, product, investor relations, meetings, communications, strategy, OKRs, legal, PR, hiring, competitive intelligence, weekly digest, M&A, exit planning, international expansion
+- 25+ red flag alerts: triggered automatically on finance, sales, marketing, HR, operations, and M&A data
+- Regional benchmarks: North America, South Asia, Southeast Asia, Middle East, UK and Europe
+- CEO background adaptation: adjusts explanation depth for technical, sales, finance, first-time, and general executive backgrounds
+- 20 live integrations: QuickBooks, Xero, Stripe, HubSpot, Salesforce, Pipedrive, GA4, Google Ads, Mailchimp, ActiveCampaign, PostHog, Mixpanel, Intercom, Zendesk, Google Sheets, Google Drive, Gmail, Notion, Slack, Shopify
+
+## Who uses this
+
+CEOs, founders, and executives at startups and growth-stage companies who use Claude Code and want AI-assisted business intelligence without switching between dashboards.
+
+## Key questions this skill answers
+
+- How is my business performing this week?
+- Is my burn rate and runway healthy?
+- Which customers are at risk of churning?
+- How do I prepare for my board meeting?
+- What should I pay a VP of Sales at my stage?
+- How do we beat our top competitor?
+- We received an acquisition offer — what do I do?
+- How do we expand into a new market?
+- What does this P&L report mean?
+- How do I connect HubSpot to get live data?
+
+## Technical details
+
+- Type: Claude Code skill (SKILL.md format)
+- Reference files: 29
+- MCP integrations: 20 tools with step-by-step setup guides
+- Benchmark sets: 5 regional, 4 industry types
+- License: MIT
+- Repository: https://github.com/Claudefarid/claude-ceo-skill
+
+## Related topics
+
+Claude Code, Claude skill, AI chief of staff, CEO AI assistant, business intelligence, HubSpot MCP, GA4 MCP, Stripe MCP, startup tools, executive assistant AI, MCP server, Model Context Protocol
