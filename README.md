@@ -7,7 +7,7 @@ An AI Chief of Staff for any CEO. Technical founders, first-time founders, caree
 ## Install
 
 ```bash
-claude skills install https://github.com/digitalmarketerswadhin-droid/ceo-assistant
+claude skills install https://github.com/Claudefarid/claude-ceo-skill
 ```
 
 Restart Claude Code. The skill activates automatically.
