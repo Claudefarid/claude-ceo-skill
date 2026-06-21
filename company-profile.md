@@ -4,6 +4,14 @@
 
 ---
 
+## Profile metadata
+
+- **Last updated:** [not set]
+- **Profile version:** 1
+- **Connected tools:** [not set — Google Drive / Gmail / HubSpot / Salesforce / QuickBooks / Xero / Google Sheets / None]
+
+---
+
 ## Company basics
 
 - **Company name:** [not set]
@@ -11,6 +19,8 @@
 - **Industry:** [not set]
 - **Company stage:** [not set — pre-revenue / early / growth / scale]
 - **Founded:** [not set]
+- **Primary operating region:** [not set — South Asia / Southeast Asia / Middle East / UK / Europe / North America / Other]
+- **International markets:** [not set]
 - **Headquarters / operating country:** [not set]
 
 ---
@@ -110,4 +120,4 @@
 
 ---
 
-*Last updated: [auto-filled by skill]*
+*Profile auto-maintained by CEO Assistant. Say "update my company profile" to refresh, or "what do you know about my company?" to review.*

@@ -1,6 +1,6 @@
 ---
 name: ceo-assistant
-description: "Executive assistant for non-technical CEOs. Remembers your company profile and uses it to give personalized answers. Activates for finance reports, HR matters, marketing reports, dashboards, operations, sales, product updates, customer success, investor relations, meetings, executive communications, strategy and OKRs, legal and compliance, and PR and media. Shows industry benchmarks alongside every metric. Proactively alerts on red flags. Routes to specialist skills for competitor profiling, SEO, content strategy, analytics, email campaigns, and lead generation. Trigger on plain-language requests like 'explain this report', 'how is sales doing', 'prepare my board update', 'summarize the dashboard', 'prep me for this meeting', 'write an all-hands announcement', 'review this contract', 'help with our OKRs' — always activate even if the request is brief."
+description: "Executive assistant for non-technical CEOs. Remembers company profile and gives personalized answers. Covers finance, HR, marketing, sales, operations, product, customer success, investor relations, meetings, communications, strategy, OKRs, legal, PR, hiring, competitive intelligence, weekly digest, M&A, exit planning, and international expansion. Shows benchmarks on every metric. Alerts on red flags. Routes to specialist skills. Triggers on plain-language requests like 'explain this report', 'how is sales doing', 'board update', 'all-hands announcement', 'review contract', 'help with OKRs', 'weekly digest', 'hire a VP', 'expand to UAE', 'acquisition offer' — always activate even if the request is brief."
 ---
 
 # CEO Assistant
@@ -66,6 +66,12 @@ Recommended action: [Specific step, owner, timeframe]
 - Paid ROAS below 1x → 🔴 Ads losing money
 - Lead volume declining 3+ consecutive months → 🔴 Top-of-funnel shrinking
 
+**M&A**
+- LOI exclusivity period exceeds 60 days → 🔴 Buyer has all the leverage
+- Earn-out tied to metrics CEO won't control post-acquisition → 🔴 Earn-out risk
+- Single customer >30% of ARR going into a sale process → 🔴 Revenue concentration will hurt valuation
+- No reference calls from the buyer's prior acquisitions → 🔴 Unverified acquirer
+
 ---
 
 ## Step 3 — Route to the right reference file
@@ -89,6 +95,8 @@ Recommended action: [Specific step, owner, timeframe]
 | Weekly digest / monthly review / state of business | Weekly Digest | `references/weekly-digest.md` |
 | Hiring / recruitment / interview / offer / onboarding | Hiring Playbook | `references/hiring.md` |
 | Competitor / competitive / win-loss / positioning / battle card | Competitive Intelligence | `references/competitive.md` |
+| M&A / acquisition / merger / exit / IPO / sell the company / valuation / due diligence / LOI | M&A & Exit Planning | `references/ma.md` |
+| International / expand / new country / new market / UAE / India / UK / Europe / Southeast Asia / global | International Expansion | `references/international.md` |
 | Setup / profile / company info / update profile | Setup | `references/setup.md` |
 
 For requests spanning multiple domains, cover each in its own section.
@@ -126,6 +134,8 @@ Complete the executive summary first, then offer specialist depth:
 
 Offer as: "For a deeper [X] analysis, I can invoke the [skill] — want me to?"
 
+**If the specialist skill is not installed:** complete the task using available knowledge from the reference files. Do not fail or leave the CEO without an answer. Note: "I don't have the [skill] installed — here's what I can tell you directly:" and proceed.
+
 ---
 
 ## Output standards
@@ -138,6 +148,7 @@ Offer as: "For a deeper [X] analysis, I can invoke the [skill] — want me to?"
 - **No jargon.** Explain acronyms on first use.
 - **No padding.** Cut anything the CEO doesn't need to act or decide.
 - **No fabricated numbers.** Write `[insert X here]` if a figure is missing.
+- **Insufficient data protocol.** If the CEO asks for a digest or analysis but no data has been shared and the company profile is empty, do not guess. Say: "To give you an accurate answer, I need a few numbers. Can you share: [list the 3 most relevant fields for this request]?" Ask for the minimum needed — not the full setup flow.
 
 ---
 
@@ -161,3 +172,5 @@ Offer as: "For a deeper [X] analysis, I can invoke the [skill] — want me to?"
 | Strategy & OKRs | `references/strategy.md` |
 | Legal & Compliance | `references/legal.md` |
 | PR & Media | `references/pr.md` |
+| M&A & Exit Planning | `references/ma.md` |
+| International Expansion | `references/international.md` |

@@ -177,6 +177,125 @@ LTV should be at least 3x CAC. AOV (Average Order Value) × purchase frequency =
 
 ---
 
+## Regional Benchmarks
+
+Load these when `company-profile.md` shows a non-US primary operating region. Use regional benchmarks alongside the global SaaS/services benchmarks above.
+
+---
+
+### South Asia (Bangladesh, India, Pakistan, Sri Lanka)
+
+**SaaS Revenue Growth (INR/BDT-denominated businesses)**
+| Stage | Good | Watch | Danger |
+|-------|------|-------|--------|
+| Early (<$200K ARR equiv.) | >20% MoM | 8–20% MoM | <8% MoM |
+| Growth ($200K–$2M ARR equiv.) | >12% MoM | 4–12% MoM | <4% MoM |
+| Scale ($2M+ ARR equiv.) | >6% MoM | 2–6% MoM | <2% MoM |
+
+**Gross Margin (South Asia SaaS)**
+| Type | Good | Watch | Danger |
+|------|------|-------|--------|
+| SaaS / Software | >65% | 45–65% | <45% |
+| IT Services / Agency | >30% | 18–30% | <18% |
+| BPO / Outsourcing | >20% | 12–20% | <12% |
+
+**Salary benchmarks (USD equivalent, approximate)**
+| Role | Bangladesh | India | Pakistan |
+|------|-----------|-------|---------|
+| Software Engineer (mid) | $8–18K/yr | $12–30K/yr | $8–18K/yr |
+| Sales (mid) | $5–12K/yr | $8–20K/yr | $5–12K/yr |
+| Marketing (mid) | $5–10K/yr | $8–18K/yr | $5–10K/yr |
+| VP / Head of (senior) | $15–35K/yr | $25–60K/yr | $15–30K/yr |
+
+**CAC Payback (South Asia B2B SaaS)**
+- Good: <24 months
+- Watch: 24–36 months
+- Danger: >36 months
+
+*Note: Longer payback acceptable at early stage — South Asia enterprise sales cycles are longer.*
+
+**Revenue per employee (IT services)**
+| Level | Status |
+|-------|--------|
+| >$50K/yr | Good for South Asia market |
+| $30–50K/yr | Acceptable |
+| <$30K/yr | Watch — pricing or staffing issue |
+
+---
+
+### Southeast Asia (Singapore, Indonesia, Vietnam, Philippines, Thailand, Malaysia)
+
+**SaaS Growth (SGD/USD regional businesses)**
+| Stage | Good | Watch | Danger |
+|-------|------|-------|--------|
+| Early | >18% MoM | 6–18% MoM | <6% MoM |
+| Growth | >10% MoM | 3–10% MoM | <3% MoM |
+| Scale | >5% MoM | 1–5% MoM | <1% MoM |
+
+**Salary benchmarks (USD equivalent)**
+| Role | Singapore | Vietnam/Philippines | Indonesia |
+|------|-----------|-------------------|-----------|
+| Software Engineer (mid) | $60–100K/yr | $15–35K/yr | $15–30K/yr |
+| Sales (mid) | $50–80K/yr | $12–25K/yr | $12–22K/yr |
+| VP / Head of | $100–160K/yr | $25–55K/yr | $22–50K/yr |
+
+**Churn (Southeast Asia SMB SaaS)**
+- Good: <4% monthly (SMB churn is structurally higher in SEA)
+- Watch: 4–7% monthly
+- Danger: >7% monthly
+
+---
+
+### Middle East (UAE, Saudi Arabia, Qatar, Egypt)
+
+**Enterprise deal benchmarks (B2B SaaS/tech)**
+| Metric | UAE/KSA Enterprise | Egypt SMB |
+|--------|-------------------|----------|
+| Average sales cycle | 3–9 months | 1–3 months |
+| Average deal size | $20K–$200K/yr | $3K–$20K/yr |
+| Win rate (typical) | 15–30% | 20–40% |
+
+**Salary benchmarks (USD)**
+| Role | UAE / Saudi | Egypt |
+|------|------------|-------|
+| Software Engineer (mid) | $40–80K/yr | $10–20K/yr |
+| Sales (mid) | $35–70K/yr | $8–15K/yr |
+| VP / Head of | $80–150K/yr | $20–40K/yr |
+
+*UAE figures include housing allowance and benefits typical in Gulf packages.*
+
+**Gross margin (Middle East tech services)**
+| Type | Good | Watch |
+|------|------|-------|
+| SaaS | >65% | 45–65% |
+| Tech consulting / SI | >35% | 20–35% |
+| Managed services | >25% | 15–25% |
+
+---
+
+### UK & Europe
+
+**SaaS Growth (GBP/EUR businesses)**
+| Stage | Good | Watch | Danger |
+|-------|------|-------|--------|
+| Early | >12% MoM | 4–12% MoM | <4% MoM |
+| Growth | >8% MoM | 2–8% MoM | <2% MoM |
+| Scale | >4% MoM | 1–4% MoM | <1% MoM |
+
+**Salary benchmarks (USD equivalent)**
+| Role | UK (London) | Germany | Eastern Europe |
+|------|------------|---------|----------------|
+| Software Engineer (mid) | $70–120K/yr | $65–110K/yr | $25–55K/yr |
+| Sales (mid) | $55–90K/yr | $55–85K/yr | $20–40K/yr |
+| VP / Head of | $120–200K/yr | $110–180K/yr | $45–90K/yr |
+
+**Churn (European enterprise SaaS)**
+- Good: <1% monthly (EU enterprise expects longer contracts)
+- Watch: 1–2% monthly
+- Danger: >2% monthly
+
+---
+
 ## How to present benchmarks in responses
 
 Always use this format when showing a metric:
