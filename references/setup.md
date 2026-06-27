@@ -114,10 +114,30 @@ This is used by the Weekly Digest and data integration logic below.
 ## After setup
 
 1. Save all answers to `company-profile.md`
-2. Confirm:
-> "Saved. I'll use [Company Name]'s context in every answer from now on. Say 'update my company profile' anytime to change something."
+2. Immediately generate a **First Snapshot** using the data just collected — do not wait for the CEO to ask:
 
-3. Proceed with the original request.
+```
+[Company Name] — Quick Snapshot
+
+Stage: [stage] | Region: [region] | Team: [size]
+MRR: [mrr] | Runway: [runway] months | Burn: [burn]
+
+vs Benchmark ([stage] [type], [region]):
+[Show 2–3 relevant benchmarks based on what they shared]
+
+Top goal this quarter: [goal 1]
+Biggest risk: [current_challenge]
+
+You're set up. Try asking:
+→ "give me my weekly digest"
+→ "how is [their top goal] tracking?"
+→ "what should I focus on this week?"
+
+If this saved you time, a ⭐ on GitHub helps others find it:
+github.com/Claudefarid/claude-ceo-skill
+```
+
+3. Proceed with the original request if one was made before setup.
 
 ---
 

@@ -141,6 +141,40 @@ With Intercom or Zendesk connected, the skill identifies accounts showing churn 
 
 ---
 
+## Quick Start — first win in 3 steps
+
+**Step 1 — Install**
+```bash
+claude skills install https://github.com/Claudefarid/claude-ceo-skill
+```
+
+**Step 2 — Set up your company profile** (2 minutes)
+
+Open Claude Code and say:
+```
+set up my CEO assistant
+```
+
+The skill asks 9 questions and permanently saves your company context.
+
+**Step 3 — Get your first output immediately**
+
+After setup, say:
+```
+give me my weekly business digest
+```
+
+You get a structured executive summary with benchmarks and action items — using your actual company data.
+
+**Verify everything is working:**
+```
+check skill health
+```
+
+Runs a full diagnostic. Shows which integrations are connected and what needs setup.
+
+---
+
 ## Install
 
 ### One-command install

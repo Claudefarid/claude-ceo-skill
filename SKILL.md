@@ -117,6 +117,7 @@ Recommended action: [Specific step, owner, timeframe]
 | Connect / integration / HubSpot / GA4 / QuickBooks / Salesforce / Mixpanel / how do I connect | Integration Setup | `references/connect.md` |
 | What can I ask / example prompts / show me what to ask / how do I use this | Prompts | `references/prompts.md` |
 | Setup / profile / company info / update profile | Setup | `references/setup.md` |
+| Health check / is everything working / check skill / verify setup / test the skill / what's connected | Health Check | `references/health-check.md` |
 
 For requests spanning multiple domains, cover each in its own section.
 

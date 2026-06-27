@@ -4,6 +4,8 @@ Use this file to contextualize any metric the CEO shares. When presenting number
 
 Format: **"Your number: X — Benchmark for [stage/type]: Y — Status: ✅ / ⚠️ / 🔴"**
 
+**Sources:** Bessemer Venture Partners State of the Cloud, OpenView SaaS Benchmarks, KeyBanc Capital Markets SaaS Survey, Paddle/ProfitWell subscription benchmarks, Battery Ventures SaaS reports, ChartMogul subscription data. Regional data: NASSCOM, e-Conomy SEA (Google/Temasek/Bain), Wamda MENA Tech reports, Tech Nation UK.
+
 ---
 
 ## How to use benchmarks
